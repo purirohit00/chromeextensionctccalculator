@@ -1,0 +1,23 @@
+
+h2 {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+input {
+    display: block;
+    padding: 2px;
+    margin: -14px;
+    margin-top: -2px;
+}
+
+#save {
+    margin-left: 5px;
+}
+
+#login_note {
+    font-size: 79%;
+    width: 180px;
+    margin-top: 8px;
+    margin-left: 1px;
+}

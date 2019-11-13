@@ -1,0 +1,47 @@
+{
+
+  "name": "Teleo ",
+    "short_name": "CTc",
+    "manifest_version": 2,
+    "version": "0.1",
+    "description": "Ctc Calculation",
+    "browser_action": {
+        "default_popup": "login-popup.html",
+        "default_icon": "klogo.png",
+        "default_title": ""
+    },
+  
+
+  "background": {
+      "persistent": true,
+        "scripts": ["background.js"],
+      "matches": ["https://cho.tbe.taleo.net/cho01/ats/candidates/OfferAdd.jsp/*", "http://cho.tbe.taleo.net/cho01/ats/candidates/OfferAdd.jsp/*"]
+  },
+  
+ 
+  "permissions": [
+    "tabs","http://localhost:8080/login?username=mahadevi@kovaion.com&password=123", "https://cho.tbe.taleo.net/cho01/ats/candidates/OfferAdd.jsp/*", "http://cho.tbe.taleo.net/cho01/ats/candidates/OfferAdd.jsp/*","http://localhost:8080/employees",
+    "activeTab"
+],
+
+"content_scripts": [{
+
+    "matches": ["https://cho.tbe.taleo.net/cho01/ats/candidates/OfferAdd.jsp/*", "https://cho.tbe.taleo.net/cho01/ats/candidates/OfferAdd.jsp/*"],
+    "js": ["cs.js","popup.js"],
+    "run_at": "document_end"
+      
+
+}],
+"web_accessible_resources": ["popup.js", "popup_calculate.js","cs.js"],
+"commands": {
+    "_execute_browser_action": {
+        "suggested_key": {
+            "windows": "Ctrl+Shift+Y",
+            "mac": "Command+Shift+Y",
+            "chromeos": "Ctrl+Shift+U",
+            "linux": "Ctrl+Shift+J"
+        }
+    }
+}
+  
+}
